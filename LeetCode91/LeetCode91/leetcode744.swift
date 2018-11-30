@@ -24,67 +24,63 @@ class leetcode744: NSObject {
     func nextGreatestLetter(_ letters: [Character], _ target: Character) -> Character {
         return "a"
     }
-//    func getxulei(_ letters: [Character]) -> [Character] {
-//        for i in (0...letters.count/2).reversed() {
-//            <#code#>
-//        }
-//        return []
-//    }
+
     func paixu(_ letter: [Int]) -> [Int] {
         var arr:[Int] = letter
-        for k  in (0...letter.count - 1).reversed() {
-            
-            arr = self.getBigDui(arr, k)
-            arr.swapAt(0, k)
+       // return self.kuaipai(letter: arr)
+       return self.kuaipai(letter: arr, beginIndex: 1, lastIndex: arr.count - 1, middIndex: 0)
+      
+    }
+    func kuaipai(letter: [Int],beginIndex: Int,lastIndex: Int,middIndex: Int) -> [Int] {
+        //[3,4,6,2,5,1]
+        var startIndex :Int = beginIndex < letter.count ? beginIndex : letter.count - 1;
+        var endIndex:Int = lastIndex < letter.count ? lastIndex : startIndex;
+        let centerIndex:Int = middIndex
+        var arr:[Int] = letter
+        let center:Int = letter[centerIndex]
+        if(startIndex >= endIndex){
+            if arr[centerIndex] > arr[startIndex]{
+                arr.swapAt(centerIndex, startIndex)
+            }
+            return arr
+        }
+        while startIndex < endIndex {
+            while arr[endIndex] > center && endIndex > startIndex{
+                endIndex  = endIndex - 1
+            }
+            while arr[startIndex] < center && endIndex > startIndex{
+                startIndex = startIndex + 1
+            }
+                arr.swapAt(startIndex, endIndex)
+            if endIndex > startIndex{
+                startIndex = startIndex + 1
+                endIndex  = endIndex - 1
+            }
+        }
+        if center > arr[startIndex]{
+            arr.swapAt(centerIndex , startIndex)
+            if startIndex >= centerIndex + 1{
+                 arr =    self.kuaipai(letter: arr, beginIndex: beginIndex, lastIndex: startIndex, middIndex: beginIndex - 1)
+            }
+            if startIndex <= arr.count - 2{
+                arr =    self.kuaipai(letter: arr, beginIndex: endIndex + 2, lastIndex: letter.count - 1, middIndex: endIndex + 1)
+            }
+        
+        }else{
+          
+                arr.swapAt(centerIndex, startIndex - 1)
+            if (startIndex - 1) >= centerIndex {
+                arr =  self.kuaipai(letter: arr, beginIndex: beginIndex, lastIndex: startIndex - 1, middIndex: beginIndex - 1)
+            }
+            if startIndex - 1 <= arr.count - 2{
+                arr =  self.kuaipai(letter: arr, beginIndex: endIndex + 1, lastIndex: letter.count - 1, middIndex: endIndex )
+            }
             
         }
+        
         return arr
     }
-        
     
-    func duipaixu(_ letter: [Int]) -> [Int] {
-        var arr:[Int] = letter
-        for k  in (0...letter.count - 1).reversed() {
-           
-            arr = self.getBigDui(arr, k)
-            arr.swapAt(0, k)
-
-        }
-        
-       return arr
-    }
- 
-    func getBigDui(_ letter: [Int] ,_ countLength:Int) -> [Int] {
-        var letters = letter
-        //   [100,55,65,44,22,32,12,45,67,88,12,34,21,34,56,78]
-        
-        for i in (0...countLength/2).reversed() {
-            let rightIndex = i * 2 + 2
-            let leftIdenx = i*2 + 1
-            var root = letters[i]
-            var left = letters[leftIdenx]
-           
-            if rightIndex <= countLength{
-               var right = letters[rightIndex]
-                if root < right{
-                    root = right + root
-                    right = root - right
-                    root = root - right
-                }
-                letters[rightIndex] = right
-            }
-            if leftIdenx <= countLength{
-                if root < left{
-                    root = left + root
-                    left = root - left
-                    root = root - left
-                }
-                letters[leftIdenx] = left
-                letters[i] = root
-            }
-        }
-        return letters
-        
-    }
+   
     
 }
