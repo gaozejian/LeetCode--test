@@ -33,9 +33,14 @@ class leetcode744: NSObject {
     }
     func kuaipai(letter: [Int],beginIndex: Int,lastIndex: Int,middIndex: Int) -> [Int] {
         //[3,4,6,2,5,1]
+        
+        if letter.count <= 0{
+            return []
+        }
+        
         var startIndex :Int = beginIndex < letter.count ? beginIndex : letter.count - 1;
         var endIndex:Int = lastIndex < letter.count ? lastIndex : startIndex;
-        let centerIndex:Int = middIndex
+        let centerIndex:Int = middIndex < letter.count ? middIndex : startIndex;
         var arr:[Int] = letter
         let center:Int = letter[centerIndex]
         if(startIndex >= endIndex){
@@ -57,26 +62,17 @@ class leetcode744: NSObject {
                 endIndex  = endIndex - 1
             }
         }
-        if center > arr[startIndex]{
-            arr.swapAt(centerIndex , startIndex)
-            if startIndex >= centerIndex + 1{
-                 arr =    self.kuaipai(letter: arr, beginIndex: beginIndex, lastIndex: startIndex, middIndex: beginIndex - 1)
-            }
-            if startIndex <= arr.count - 2{
-                arr =    self.kuaipai(letter: arr, beginIndex: endIndex + 2, lastIndex: letter.count - 1, middIndex: endIndex + 1)
-            }
-        
-        }else{
-          
-                arr.swapAt(centerIndex, startIndex - 1)
-            if (startIndex - 1) >= centerIndex {
-                arr =  self.kuaipai(letter: arr, beginIndex: beginIndex, lastIndex: startIndex - 1, middIndex: beginIndex - 1)
-            }
-            if startIndex - 1 <= arr.count - 2{
-                arr =  self.kuaipai(letter: arr, beginIndex: endIndex + 1, lastIndex: letter.count - 1, middIndex: endIndex )
-            }
-            
+        if endIndex < startIndex{
+            swap(&endIndex, &startIndex)
         }
+        if center < arr[startIndex] {
+            startIndex = startIndex - 1
+            endIndex = endIndex - 1
+        }
+        arr.swapAt(centerIndex , startIndex)
+        arr =    self.kuaipai(letter: arr, beginIndex: beginIndex, lastIndex: startIndex, middIndex: beginIndex - 1)
+        
+        arr =    self.kuaipai(letter: arr, beginIndex: endIndex + 2, lastIndex: letter.count - 1, middIndex: endIndex + 1)
         
         return arr
     }
