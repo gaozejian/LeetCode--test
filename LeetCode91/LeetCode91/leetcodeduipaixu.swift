@@ -32,18 +32,14 @@ class leetcodeduipaixu: NSObject {
             if rightIndex <= countLength{
                 var right = letters[rightIndex]
                 if root < right{
-                    root = right + root
-                    right = root - right
-                    root = root - right
+                    swap(&root, &right)
                 }
                 letters[rightIndex] = right
             }
             if leftIdenx <= countLength{
                 var left = letters[leftIdenx]
                 if root < left{
-                    root = left + root
-                    left = root - left
-                    root = root - left
+                    swap(&root, &left)
                 }
                 letters[leftIdenx] = left
                 letters[i] = root
@@ -52,4 +48,13 @@ class leetcodeduipaixu: NSObject {
         return letters
         
     }
+    /*
+     https://blog.csdn.net/yuzhihui_no1/article/details/44258297
+     时间复杂度计算
+     0 1 2 3 4 5 6 7...
+     0 0 1 1 2 2 3 3...
+     (1 + 2 + 3 + 4 + .... n/2)*2
+    ( 1+ n/2)/2 * n/2 * 2
+     (2+n)/4 * n = n^2 + 2n  == O(n^2)
+     */
 }

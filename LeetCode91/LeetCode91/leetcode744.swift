@@ -27,56 +27,43 @@ class leetcode744: NSObject {
 
     func paixu(_ letter: [Int]) -> [Int] {
         var arr:[Int] = letter
-       // return self.kuaipai(letter: arr)
-       return self.kuaipai(letter: arr, beginIndex: 1, lastIndex: arr.count - 1, middIndex: 0)
-      
+        print(letter)
+       return self.guibing(arr, 2)
     }
-    func kuaipai(letter: [Int],beginIndex: Int,lastIndex: Int,middIndex: Int) -> [Int] {
-        //[3,4,6,2,5,1]
-        
-        if letter.count <= 0{
-            return []
-        }
-        
-        var startIndex :Int = beginIndex < letter.count ? beginIndex : letter.count - 1;
-        var endIndex:Int = lastIndex < letter.count ? lastIndex : startIndex;
-        let centerIndex:Int = middIndex < letter.count ? middIndex : startIndex;
+   
+    func guibing(_ letter:[Int],_ length:Int) -> [Int] {
+       
         var arr:[Int] = letter
-        let center:Int = letter[centerIndex]
-        if(startIndex >= endIndex){
-            if arr[centerIndex] > arr[startIndex]{
-                arr.swapAt(centerIndex, startIndex)
+        var inserIndexArr:[Int] = []
+        for i in 0..<letter.count {
+            var v = i/length * length + length/2
+            if length > arr.count{
+                v = length/2
             }
+            if i >= v {
+                
+                var startIndex = i/length * length < 0 ? 0 : i/length * length
+                while arr[i] >= arr[startIndex] && startIndex < v{
+                    startIndex += 1
+                }
+                inserIndexArr.append(startIndex)
+              
+            }
+            if (i == (i + 1)/length * length - 1  && (i + 1)/length > 0) || i == arr.count - 1 {
+                    for j in 0..<inserIndexArr.count{
+                        let inser = arr[i - inserIndexArr.count + 1 + j]
+                        arr.remove(at:i - inserIndexArr.count + 1 + j)
+                        arr.insert(inser, at:  inserIndexArr[j]  + j)
+                    }
+                inserIndexArr.removeAll()
+            }
+            
+        }
+        if length > letter.count {
             return arr
         }
-        while startIndex < endIndex {
-            while arr[endIndex] > center && endIndex > startIndex{
-                endIndex  = endIndex - 1
-            }
-            while arr[startIndex] < center && endIndex > startIndex{
-                startIndex = startIndex + 1
-            }
-                arr.swapAt(startIndex, endIndex)
-            if endIndex > startIndex{
-                startIndex = startIndex + 1
-                endIndex  = endIndex - 1
-            }
-        }
-        if endIndex < startIndex{
-            swap(&endIndex, &startIndex)
-        }
-        if center < arr[startIndex] {
-            startIndex = startIndex - 1
-            endIndex = endIndex - 1
-        }
-        arr.swapAt(centerIndex , startIndex)
-        arr =    self.kuaipai(letter: arr, beginIndex: beginIndex, lastIndex: startIndex, middIndex: beginIndex - 1)
-        
-        arr =    self.kuaipai(letter: arr, beginIndex: endIndex + 2, lastIndex: letter.count - 1, middIndex: endIndex + 1)
-        
+         arr = self.guibing(arr, 2 * length )
         return arr
     }
-    
    
-    
 }
