@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF257CB321C39BBC00A7B3BC /* leetcodeMaoPao.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF257CB221C39BBC00A7B3BC /* leetcodeMaoPao.swift */; };
 		EF552EFD213CCEC60044E4D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF552EFC213CCEC60044E4D1 /* AppDelegate.swift */; };
 		EF552EFF213CCEC60044E4D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF552EFE213CCEC60044E4D1 /* ViewController.swift */; };
 		EF552F02213CCEC60044E4D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF552F00213CCEC60044E4D1 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF257CB221C39BBC00A7B3BC /* leetcodeMaoPao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leetcodeMaoPao.swift; sourceTree = "<group>"; };
 		EF552EF9213CCEC60044E4D1 /* LeetCode91.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetCode91.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF552EFC213CCEC60044E4D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF552EFE213CCEC60044E4D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				EFD9A44621A9390700E25F67 /* leetcode744.swift */,
 				EFECCEC621AFDBA200A6BDD8 /* leetcodeduipaixu.swift */,
 				EFECCED321B4DD4B00A6BDD8 /* leetcodequickiy.swift */,
+				EF257CB221C39BBC00A7B3BC /* leetcodeMaoPao.swift */,
 				EF552F00213CCEC60044E4D1 /* Main.storyboard */,
 				EF552F03213CCEC60044E4D1 /* Assets.xcassets */,
 				EF552F05213CCEC60044E4D1 /* LaunchScreen.storyboard */,
@@ -309,6 +312,7 @@
 				EFCF2537215DF4D40065F0E6 /* LeetCode122.swift in Sources */,
 				EF5854ED219FEAB20004A9C5 /* leetcode784.swift in Sources */,
 				EFD9A43921A7F5C300E25F67 /* Leecode22.swift in Sources */,
+				EF257CB321C39BBC00A7B3BC /* leetcodeMaoPao.swift in Sources */,
 				EFBA1EEC21708E7E0069D659 /* leetCode55.swift in Sources */,
 				EFCF2533215CBA9B0065F0E6 /* leetcode.swift in Sources */,
 				EFCF2535215DCE410065F0E6 /* LeetCode2.swift in Sources */,

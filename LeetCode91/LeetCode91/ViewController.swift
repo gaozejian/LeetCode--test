@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         //var leet = leetCode874.init()
-        let leet = leetcodeduipaixu.init()
+        let leet = leetcodeMaoPao.init()
        // [-2,-1,-2,3,7]
        // [[1,-3],[2,-3],[4,0],[-2,5],[-5,2],[0,0],[4,-4],[-2,-5],[-1,-2],[0,2]]
       //  print(leet.canJump([2,3,1,1,4]))
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
             tree1.right = tree3
        // print(leet.isSymmetric(tree1))//[100,55,65,44,22,32,12,45,67,88,12,34,21,34,56,78]
         //[2,4,6,3,1,8,5,7,32,45,5,76,87,7856,4,3423,3,254,65,65,7,75,4,3,45,6,67,875434,5677,78,542,32,323,45,6567,43,]
-        print(leet.duipaixu([2,4,6,3,1,8,5,7,32,45,5,76,87,7856,4,3423,3,254,65,65,7,75,4,3,45,6,67,875434,5677,78,542,32,323,45,6567,43,]))//[2,4,6,3,5,1] [7,2,6,3,5,1,4]
+        print(leet.paixu([7,2,6,3,5,1,4]))//[2,4,6,3,5,1] [7,2,6,3,5,1,4]
         //[2,4,6,3,5,1,5,7,6,8,3,232,3,2,43,23,65,6,76,723,2,12,1,]
     }
     
