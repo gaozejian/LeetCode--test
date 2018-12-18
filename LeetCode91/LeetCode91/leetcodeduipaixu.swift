@@ -60,7 +60,9 @@ class leetcodeduipaixu: NSObject {
     
     
     func duipaixu(_ letter: [Int]) -> [Int] {
-        print(letter)
+        //print(letter)
+        let startTime = CFAbsoluteTimeGetCurrent()
+
         var arr:[Int] = letter
         for k  in (0...((letter.count-1)/2)).reversed() {
             
@@ -71,6 +73,8 @@ class leetcodeduipaixu: NSObject {
             arr.swapAt(0, k)
             arr = self.getBigDui(arr, 0,k-1)
         }
+        let endTime = CFAbsoluteTimeGetCurrent()
+        print("代码dui执行时长：%f 秒", (endTime - startTime))
         return arr
     }
     
