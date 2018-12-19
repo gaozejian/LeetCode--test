@@ -37,55 +37,56 @@ class leetcdoekmp: NSObject {
         var next :[Int] = []
         
         for i  in 0..<str.count {
-            let index0 = str.index(str.startIndex, offsetBy: 0)
-            let index1 = str.index(str.startIndex, offsetBy: i)
-            let strItme = str[index0...index1]
+
+            let strItme = str.getStringRangeStr(0, i)
             print(strItme)
             if(i == 0){
                 next.append(0)
             }else{
                 let lastLength = next[i - 1]
-                
-                let lastIndex = strItme.index(strItme.startIndex, offsetBy: strItme.count - 1)
-                let lastStr = strItme[lastIndex]
-                
-                if lastLength == 0{
-                    let firstIndex = strItme.index(strItme.startIndex, offsetBy: 0)
-                    let firstStr = strItme[firstIndex]
-                    if(lastStr == firstStr){
+                let lastStr = strItme.getStringChar(strItme.count - 1)//最后字符
+                let firstStr = strItme.getStringChar(0)//第一个字符
+                if(lastStr == firstStr){
+                   
+                    next.append(lastLength + 1)
+                }else{
+                    let PfirstStr = strItme.getStringChar(0)//第一个字符
+                    if(lastStr == PfirstStr){
                         next.append(1)
                     }else{
                         next.append(0)
                     }
-                }else{
-                    let firstIndex = strItme.index(strItme.startIndex, offsetBy: lastLength)
-                    let firstStr = strItme[firstIndex]
-                    if(lastStr == firstStr){
-                        next.append(next[i - 1] + 1)
-                    }else{
-                        let firstIndex = strItme.index(strItme.startIndex, offsetBy: 0)
-                        let firstStr = strItme[firstIndex]
-                        if(lastStr == firstStr){
-                            next.append(1)
-                        }else{
-                            next.append(0)
-                        }
-                    }
                 }
-                
-                
-                
             }
-            
-            
-            
         }
          print(next)
-        return []
+        return next
     }
     
     func kmp(_ mainStr :String ,_ pStr :String) -> Bool {
-        self.gethexLong("abababca")
+       
+     let next = self.gethexLong(pStr)
+        var j = 0
+        var count = 0 //一共可以匹配的字符串个数
+        for i  in 0..<mainStr.count{
+            
+            let str  = mainStr.getStringChar(i)
+            let strp = pStr.getStringChar(j)
+            
+            if str != strp{
+                let lastCount = next[j]
+                j = lastCount
+            }else{
+                if j == pStr.count - 1{
+                    count += 1
+                    return true
+                    j = 0
+                }else{
+                    j += 1
+                }
+               
+            }
+        }
         return false
     }
 }

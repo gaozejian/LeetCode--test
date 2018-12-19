@@ -55,8 +55,10 @@ class ViewController: UIViewController {
 //        leet.paixu4(arr)
 //        var dui = leetcodeduipaixu.init()
 //        dui.duipaixu(arr)
-        let leet = leetcdoekmp.init()
-        print(leet.kmp("1234561223", "45a"))
+      //  let leet = leetcdoekmp.init()
+       // print(leet.kmp("12345612123", "121"))
+        let leet = leetcode2fensearch.init()
+        print(leet.twofen([1,2,3,4,6,8,23,45,67,68], 681, 0, 9))
         
         
         
