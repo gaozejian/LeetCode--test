@@ -57,10 +57,18 @@ class ViewController: UIViewController {
 //        dui.duipaixu(arr)
       //  let leet = leetcdoekmp.init()
        // print(leet.kmp("12345612123", "121"))
-        let leet = leetcode2fensearch.init()
-        print(leet.twofen([1,2,3,4,6,8,23,45,67,68], 681, 0, 9))
+      //  let leet = leetcode2fensearch.init()
+       // print(leet.twofen([1,2,3,4,6,8,23,45,67,68], 681, 0, 9))
         
+//        let leet = LeetCodeHash.init(10)
+//        leet.MyValueForKey("name", "zejian")
+//        print(leet.myValueForKey("name"))
         
+        let leet = LeetCodetwoTreeSearch.init()
+     //   let tree = leet.createTree([38,26,62,94,35,50,28,55])
+        print(leet.nodeTreeSearche(57, [38,26,62,94,35,50,28,55]))
+        //let code94 = leetCode94.init()
+      //  print(code94.inorderTraversal(tree))
         
     }
     
