@@ -75,11 +75,35 @@ class LeetCodetwoTreeSearch: NSObject {
     
     func deleNodeTree(_ key : Int , _ arr : [Int]) -> TreeNode {
         var tree = self.createTree(arr)
+        var treeT = tree
         if self.nodeTreeSearche(key, arr){
             print("不存在")
             return tree
         }
-        
+    
+        while true {
+            
+            let value = tree.val
+            if value > key {
+                if tree.left != nil{
+                    treeT = tree
+                    tree = tree.left!
+                }else{
+                    break
+                }
+                
+            }else if value < key{
+                if tree.right != nil{
+                    tree = tree.right!
+                }else{
+                    break
+                }
+            }else{
+                if tree.left != nil{
+                    
+                }
+            }
+        }
         return tree
     }
     
