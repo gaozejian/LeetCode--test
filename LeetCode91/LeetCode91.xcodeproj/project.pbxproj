@@ -32,6 +32,9 @@
 		EFEAB6F221CA32E9006DFA8F /* leetcode2fensearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEAB6F121CA32E9006DFA8F /* leetcode2fensearch.swift */; };
 		EFEAB6F421CB3B05006DFA8F /* LeetCodetwoTreeSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEAB6F321CB3B05006DFA8F /* LeetCodetwoTreeSearch.swift */; };
 		EFEAB70621CB81F4006DFA8F /* LeetCodeHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEAB70521CB81F4006DFA8F /* LeetCodeHash.swift */; };
+		EFEAB70821D07804006DFA8F /* LeetCodeAVLTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEAB70721D07803006DFA8F /* LeetCodeAVLTree.swift */; };
+		EFEAB70A21D34FBD006DFA8F /* leetcodeTupulimu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEAB70921D34FBD006DFA8F /* leetcodeTupulimu.swift */; };
+		EFEAB70C21D5CCC4006DFA8F /* LeetCodeMostLessLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEAB70B21D5CCC4006DFA8F /* LeetCodeMostLessLength.swift */; };
 		EFECCEC721AFDBA200A6BDD8 /* leetcodeduipaixu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFECCEC621AFDBA200A6BDD8 /* leetcodeduipaixu.swift */; };
 		EFECCED421B4DD4B00A6BDD8 /* leetcodequickiy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFECCED321B4DD4B00A6BDD8 /* leetcodequickiy.swift */; };
 /* End PBXBuildFile section */
@@ -85,6 +88,9 @@
 		EFEAB6F121CA32E9006DFA8F /* leetcode2fensearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leetcode2fensearch.swift; sourceTree = "<group>"; };
 		EFEAB6F321CB3B05006DFA8F /* LeetCodetwoTreeSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCodetwoTreeSearch.swift; sourceTree = "<group>"; };
 		EFEAB70521CB81F4006DFA8F /* LeetCodeHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCodeHash.swift; sourceTree = "<group>"; };
+		EFEAB70721D07803006DFA8F /* LeetCodeAVLTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCodeAVLTree.swift; sourceTree = "<group>"; };
+		EFEAB70921D34FBD006DFA8F /* leetcodeTupulimu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leetcodeTupulimu.swift; sourceTree = "<group>"; };
+		EFEAB70B21D5CCC4006DFA8F /* LeetCodeMostLessLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCodeMostLessLength.swift; sourceTree = "<group>"; };
 		EFECCEC621AFDBA200A6BDD8 /* leetcodeduipaixu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leetcodeduipaixu.swift; sourceTree = "<group>"; };
 		EFECCED321B4DD4B00A6BDD8 /* leetcodequickiy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leetcodequickiy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +165,9 @@
 				EFEAB6F121CA32E9006DFA8F /* leetcode2fensearch.swift */,
 				EFEAB6F321CB3B05006DFA8F /* LeetCodetwoTreeSearch.swift */,
 				EFEAB70521CB81F4006DFA8F /* LeetCodeHash.swift */,
+				EFEAB70721D07803006DFA8F /* LeetCodeAVLTree.swift */,
+				EFEAB70921D34FBD006DFA8F /* leetcodeTupulimu.swift */,
+				EFEAB70B21D5CCC4006DFA8F /* LeetCodeMostLessLength.swift */,
 				EF552F00213CCEC60044E4D1 /* Main.storyboard */,
 				EF552F03213CCEC60044E4D1 /* Assets.xcassets */,
 				EF552F05213CCEC60044E4D1 /* LaunchScreen.storyboard */,
@@ -324,11 +333,13 @@
 				EFCF253B215E29270065F0E6 /* leetCode874.swift in Sources */,
 				EFB9DDFC218C1A880063BE3C /* LeetCode101.swift in Sources */,
 				EFBA1EEE21745FEC0069D659 /* leetCode114.swift in Sources */,
+				EFEAB70821D07804006DFA8F /* LeetCodeAVLTree.swift in Sources */,
 				EFECCED421B4DD4B00A6BDD8 /* leetcodequickiy.swift in Sources */,
 				EFCF2537215DF4D40065F0E6 /* LeetCode122.swift in Sources */,
 				EF5854ED219FEAB20004A9C5 /* leetcode784.swift in Sources */,
 				EFD9A43921A7F5C300E25F67 /* Leecode22.swift in Sources */,
 				EFEAB6F221CA32E9006DFA8F /* leetcode2fensearch.swift in Sources */,
+				EFEAB70A21D34FBD006DFA8F /* leetcodeTupulimu.swift in Sources */,
 				EF257CB321C39BBC00A7B3BC /* leetcodeMaoPao.swift in Sources */,
 				EFBA1EEC21708E7E0069D659 /* leetCode55.swift in Sources */,
 				EFCF2533215CBA9B0065F0E6 /* leetcode.swift in Sources */,
@@ -341,6 +352,7 @@
 				EFBA1EF02175E3800069D659 /* leetCode94.swift in Sources */,
 				EF552EFF213CCEC60044E4D1 /* ViewController.swift in Sources */,
 				EF552EFD213CCEC60044E4D1 /* AppDelegate.swift in Sources */,
+				EFEAB70C21D5CCC4006DFA8F /* LeetCodeMostLessLength.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -66,6 +66,7 @@ class leetCode114: NSObject {
 }
 public class TreeNode {
     public var val: Int
+    public var bf: Int = 0
     public var left: TreeNode?
     public var right: TreeNode?
     public init(_ val: Int) {

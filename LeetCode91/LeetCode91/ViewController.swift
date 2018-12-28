@@ -64,9 +64,10 @@ class ViewController: UIViewController {
 //        leet.MyValueForKey("name", "zejian")
 //        print(leet.myValueForKey("name"))
         
-        let leet = LeetCodetwoTreeSearch.init()
+        let leet = LeetCodeMostLessLength.init()
      //   let tree = leet.createTree([38,26,62,94,35,50,28,55])
-        print(leet.nodeTreeSearche(57, [38,26,62,94,35,50,28,55]))
+        //[3,2,1,4,5,6,7,10,9,8]
+        print(leet.getLessLengtnPonitToPoint([[0]]))
         //let code94 = leetCode94.init()
       //  print(code94.inorderTraversal(tree))
         
