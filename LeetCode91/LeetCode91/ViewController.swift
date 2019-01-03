@@ -23,25 +23,25 @@ class ViewController: UIViewController {
       //  print(leet.canJump([2,3,1,1,4]))
        //print(leet.robotSim([-2,-1,-2,3,7], [[1,-3],[2,-3],[4,0],[-2,5],[-5,2],[0,0],[4,-4],[-2,-5],[-1,-2],[0,2]]))
   //    print(leet.robotSim([4,3], [[0,3]]))
-//        var tree1 = TreeNode.init(1)
-//         var tree2 = TreeNode.init(2)
-//        var tree5 = TreeNode.init(5)
-//        tree2.left = TreeNode.init(3)
-//        tree2.right = TreeNode.init(4)
-//        tree5.right = TreeNode.init(6)
-//        tree1.left = tree2
-//        tree1.right = tree5
-        
-        
         var tree1 = TreeNode.init(1)
-        var tree2 = TreeNode.init(2)
-        var tree3 = TreeNode.init(2)
-            tree2.left = TreeNode.init(3)
-            tree2.right = TreeNode.init(4)
-            tree3.left = TreeNode.init(4)
-            tree3.right = TreeNode.init(3)
-            tree1.left = tree2
-            tree1.right = tree3
+         var tree2 = TreeNode.init(2)
+        var tree5 = TreeNode.init(5)
+        tree2.left = TreeNode.init(3)
+        tree2.right = TreeNode.init(4)
+        tree5.right = TreeNode.init(6)
+        tree1.left = tree2
+        tree1.right = tree5
+        
+        
+//        var tree1 = TreeNode.init(1)
+//        var tree2 = TreeNode.init(2)
+//        var tree3 = TreeNode.init(2)
+//            tree2.left = TreeNode.init(3)
+//            tree2.right = TreeNode.init(4)
+//            tree3.left = TreeNode.init(4)
+//            tree3.right = TreeNode.init(3)
+//            tree1.left = tree2
+//            tree1.right = tree3
         //print(leet.getArr10000(20))
        // print(leet.isSymmetric(tree1))//[100,55,65,44,22,32,12,45,67,88,12,34,21,34,56,78]
         //[2,4,6,3,1,8,5,7,32,45,5,76,87,7856,4,3423,3,254,65,65,7,75,4,3,45,6,67,875434,5677,78,542,32,323,45,6567,43,]
@@ -64,12 +64,15 @@ class ViewController: UIViewController {
 //        leet.MyValueForKey("name", "zejian")
 //        print(leet.myValueForKey("name"))
         
-        let leet = LeetCodeMostLessLength.init()
+      //  let leet = LeetCodeMostLessLength.init()
      //   let tree = leet.createTree([38,26,62,94,35,50,28,55])
         //[3,2,1,4,5,6,7,10,9,8]
-        print(leet.getLessLengtnPonitToPoint([[0]]))
+      // print(leet.getLessLengtnPonitToPoint([[0]]))
         //let code94 = leetCode94.init()
       //  print(code94.inorderTraversal(tree))
+        let leet = leetCode94.init()
+        print(leet.inorderTraversalWhile2(tree1))
+        
         
     }
     

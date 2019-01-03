@@ -75,3 +75,11 @@ public class TreeNode {
         self.right = nil
     }
 }
+public class ListNode {
+    public var data: Int
+    public var next: ListNode?
+    public init(_ data: Int) {
+        self.data = data
+        self.next = nil
+    }
+}

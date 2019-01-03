@@ -79,6 +79,7 @@ class leetCode94: NSObject {
    
         return arr
     }
+    //*******
     func inorderTraversalWhile2(_ root: TreeNode?) -> [Int] {
         var arr = [Int]()
         var treeNodeRright = [TreeNode]()
@@ -89,23 +90,25 @@ class leetCode94: NSObject {
                 if rootL?.left != nil{
                     rootL = rootL?.left
                 }else{
-                    rootL = nil
+                    break
                 }
                 newRight?.left = nil
                 treeNodeRright.append(newRight!)
             }
-            while rootL?.right != nil || rootL != nil{
-                let newRight = rootL
-                if rootL?.left != nil{
-                    rootL = rootL?.left
+    
+                if rootL?.right != nil{
+                    arr.append((rootL?.val)!)
+                    rootL = rootL?.right
                 }else{
-                    rootL = nil
+                    arr.append((rootL?.val)!)
+                    if treeNodeRright.count > 0{
+                        rootL = treeNodeRright.last
+                        treeNodeRright.remove(at: treeNodeRright.count - 1)
+                    }else{
+                        rootL = nil
+                    }
+                
                 }
-                newRight?.left = nil
-                treeNodeRright.append(newRight!)
-            }
-           
-            
         }
         
         return arr
