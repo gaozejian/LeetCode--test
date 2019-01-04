@@ -142,4 +142,86 @@ class ip: NSObject {
      关于GET的缓存
          如果数据没有变的话,服务器会根据第一次返回的报文 last - modified 进行判断是否需要更新,否则直接使用缓存
      */
+    
+    /*
+     https://zhuanlan.zhihu.com/p/22142170
+     https://blog.csdn.net/qq_23167527/article/details/80614454
+     HTTPS :
+           1.客户端发起ssl 请求,
+           2.服务端向客户端发送CA证书
+           3.客户端验证CA证书,并且从CA中取出 注册CA时的公钥,生成对称秘钥,对对称秘钥加密,发送给服务器
+           4,服务器收到请求,用注册CA时的私钥 解密加密信息 得到 对称秘钥
+           然后通信通过对称秘钥加密信息 解密信息
+     
+     第一种用法：公钥加密，私钥解密。---用于加解密
+     第二种用法：私钥签名，公钥验签。---用于签名
+     
+
+     */
+    
+    /*
+     https://www.douban.com/group/topic/114519182/
+     
+     链接：https://www.zhihu.com/question/29637351/answer/534704474
+     来源：知乎
+     https://yunxin.163.com/dev-blog?from=zhihu&utm_source=zhihu&utm_medium=ques&utm_campaign=seo&utm_content=video-ques
+     网易云
+     
+     socket是位于传输层的网络编程了，一般用于需要自己定义应用层的协议的应用程序，如果已经有了成熟的应用层协议，比如http等，
+     
+     其中的传输层就是 TCP/IP 所在的地方，而你平时通过代码编写的应用程序大多属于应用层范畴，socket 在这里起到就是连接应用层与传输层的作用。socket 的诞生是为了应用程序能够更方便的将数据经由传输层来传输，所以它本质上就是对 TCP/IP 的运用进行了一层封装，然后应用程序直接调用 socket API 即可进行通信。那么它是如何工作的呢？它分为 2 个部分，服务端需要建立 socket 来监听指定的地址，然后等待客户端来连接。而客户端则需要建立 socket 并与服务端的 socket 地址进行连接。
+     
+     作者：网易云信
+     //聊天室介绍
+     https://zhuanlan.zhihu.com/p/24475299
+     LCSStudioSocketController >>  LCSAsyncSocket
+     1. 通过HTTP 请求 获取 socket 需要的 host(域名或ip) 和 port(端口号8080)
+     2.初始化socket抽象类,默认端口赋值 然后socket 懒加载初始化 异步线程 链接socket
+        代理方法f收到回调 socket 链接成功, 这时候在代理方法中 进行身份验证(将用户的个人信息发送过去),
+         身份验证过程:
+                   身份信息(从字典>string > nsdata)转换成nsdata, 准换成 byte类型,获取内容长度,
+                   NSData.length + 首部.length  得到分包的长度
+                   然后把包首 结构体 + n数据内容  拼接成完整的 NSData包数据
+                     包首 如下
+                     SocketHeader header = {
+                                     CFSwapInt32HostToBig(packLen), //包的长度
+                                     CFSwapInt16HostToBig([self headerLength]),//包首的长度
+                                     CFSwapInt16HostToBig(LCS_VERSION),//版本号
+                                     CFSwapInt32HostToBig((uint32_t)command),//用来判断消息类型,如验证身份,新消息,加入房间,退出房间,或者是心跳数据
+                                     CFSwapInt32HostToBig((uint32_t)seq)//聊天室的id
+                                     };
+                   然后通过socket 把数据写入传给服务器 tag 为自己定义的表示 用来区分类型
+                   [self.socket writeData:requestData withTimeout:WRITE_TIME_OUT tag:LCS_DEFAULT_TAG];
+                   回调UI控制器,提示连接成功
+        2.1 如果连接失败 根据具体情况 如果是超时,意外断开,那么开始重新连接 达到重连次数,那么不再连接
+     
+     3. 接下来 就是通过 socket didReadData  didWriteData 两个代理方法接受和发送数据
+     3.1 接收数据:
+          - (void)socket:(LCSAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
+         拿到数据以后首先进行解包
+          取出数据的包首,b拿到包的长度 然后和接收到的data 长度进行比较, 如果想等就是完整包,
+          完整包对消息类型判断:
+                     1.身份验证成功则是 开始心跳,然后更新用户数据添加房间号,进行加入房间请求 socket发送
+                     2.如果其他的几种情况如: 新消息,加入房间,等则直接处理包数剧
+     完整包解析:
+        取出包首,拿到聊天室id 判断是否为当前聊天室,如果不是 return
+        如果是当前聊天室 把数据解析json 通过代理方法把数据传给应用界面
+     
+     如果是有分包数据 当前为第一次接收:
+           创建 数据接收对象 将包长和数据类型 以及当前数据复制给他,
+     如果收到的是分包的第二包以及以后的数据
+          如果新数据添加以后 数据完整,那么进行数据解包,如果数据超过了(异常)
+     //如果数据异常:粘包现象
+           截取多余的数据,如果该数据长度 小于 包首的长度,那么直接舍弃
+           如果大于包首长度,则按照有分包的数据处理
+     
+     
+     */
+    
+    /*
+     AFNetworing 线程分析
+     https://www.jianshu.com/p/b5c27669e2c1
+     
+     通过NSOperation 实现控制 监听网络请求的 创建、进行、取消、完成、暂停恢复、异常等问题及状态
+     */
 }
