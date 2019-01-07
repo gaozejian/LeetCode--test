@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EF257CB321C39BBC00A7B3BC /* leetcodeMaoPao.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF257CB221C39BBC00A7B3BC /* leetcodeMaoPao.swift */; };
+		EF2B414C21E2E749006461A3 /* 内存管理.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B414B21E2E749006461A3 /* 内存管理.swift */; };
 		EF552EFD213CCEC60044E4D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF552EFC213CCEC60044E4D1 /* AppDelegate.swift */; };
 		EF552EFF213CCEC60044E4D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF552EFE213CCEC60044E4D1 /* ViewController.swift */; };
 		EF552F02213CCEC60044E4D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF552F00213CCEC60044E4D1 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		EFCF253B215E29270065F0E6 /* leetCode874.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCF253A215E29270065F0E6 /* leetCode874.swift */; };
 		EFD3E03321DC5F5600EBC74B /* leetcodeListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD3E03221DC5F5600EBC74B /* leetcodeListNode.swift */; };
 		EFD3E03521DCB1F500EBC74B /* tcp_socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD3E03421DCB1F500EBC74B /* tcp_socket.swift */; };
+		EFD3E04721DF68EB00EBC74B /* thread_gcd_nsopreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD3E04621DF68EB00EBC74B /* thread_gcd_nsopreation.swift */; };
 		EFD9A43921A7F5C300E25F67 /* Leecode22.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD9A43821A7F5C200E25F67 /* Leecode22.swift */; };
 		EFD9A44721A9390700E25F67 /* leetcode744.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD9A44621A9390700E25F67 /* leetcode744.swift */; };
 		EFEAB6F021C9F4C3006DFA8F /* stringRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEAB6EF21C9F4C2006DFA8F /* stringRange.swift */; };
@@ -60,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		EF257CB221C39BBC00A7B3BC /* leetcodeMaoPao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leetcodeMaoPao.swift; sourceTree = "<group>"; };
+		EF2B414B21E2E749006461A3 /* 内存管理.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "内存管理.swift"; sourceTree = "<group>"; };
 		EF552EF9213CCEC60044E4D1 /* LeetCode91.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetCode91.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF552EFC213CCEC60044E4D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF552EFE213CCEC60044E4D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +89,7 @@
 		EFCF253A215E29270065F0E6 /* leetCode874.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leetCode874.swift; sourceTree = "<group>"; };
 		EFD3E03221DC5F5600EBC74B /* leetcodeListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leetcodeListNode.swift; sourceTree = "<group>"; };
 		EFD3E03421DCB1F500EBC74B /* tcp_socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tcp_socket.swift; sourceTree = "<group>"; };
+		EFD3E04621DF68EB00EBC74B /* thread_gcd_nsopreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thread_gcd_nsopreation.swift; sourceTree = "<group>"; };
 		EFD9A43821A7F5C200E25F67 /* Leecode22.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leecode22.swift; sourceTree = "<group>"; };
 		EFD9A44621A9390700E25F67 /* leetcode744.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leetcode744.swift; sourceTree = "<group>"; };
 		EFEAB6EF21C9F4C2006DFA8F /* stringRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stringRange.swift; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				EFEAB70B21D5CCC4006DFA8F /* LeetCodeMostLessLength.swift */,
 				EFD3E03221DC5F5600EBC74B /* leetcodeListNode.swift */,
 				EFD3E03421DCB1F500EBC74B /* tcp_socket.swift */,
+				EFD3E04621DF68EB00EBC74B /* thread_gcd_nsopreation.swift */,
+				EF2B414B21E2E749006461A3 /* 内存管理.swift */,
 				EF552F00213CCEC60044E4D1 /* Main.storyboard */,
 				EF552F03213CCEC60044E4D1 /* Assets.xcassets */,
 				EF552F05213CCEC60044E4D1 /* LaunchScreen.storyboard */,
@@ -339,6 +345,7 @@
 				EFD9A44721A9390700E25F67 /* leetcode744.swift in Sources */,
 				EFCF253B215E29270065F0E6 /* leetCode874.swift in Sources */,
 				EFB9DDFC218C1A880063BE3C /* LeetCode101.swift in Sources */,
+				EFD3E04721DF68EB00EBC74B /* thread_gcd_nsopreation.swift in Sources */,
 				EFBA1EEE21745FEC0069D659 /* leetCode114.swift in Sources */,
 				EFEAB70821D07804006DFA8F /* LeetCodeAVLTree.swift in Sources */,
 				EFECCED421B4DD4B00A6BDD8 /* leetcodequickiy.swift in Sources */,
@@ -349,6 +356,7 @@
 				EFEAB70A21D34FBD006DFA8F /* leetcodeTupulimu.swift in Sources */,
 				EF257CB321C39BBC00A7B3BC /* leetcodeMaoPao.swift in Sources */,
 				EFBA1EEC21708E7E0069D659 /* leetCode55.swift in Sources */,
+				EF2B414C21E2E749006461A3 /* 内存管理.swift in Sources */,
 				EFCF2533215CBA9B0065F0E6 /* leetcode.swift in Sources */,
 				EFA7CC7721C8E4BD00212206 /* leetcdoekmp.swift in Sources */,
 				EFCF2535215DCE410065F0E6 /* LeetCode2.swift in Sources */,
