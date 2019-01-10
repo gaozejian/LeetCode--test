@@ -66,11 +66,20 @@ class leetCode114: NSObject {
 }
 public class TreeNode {
     public var val: Int
+    public var bf: Int = 0
     public var left: TreeNode?
     public var right: TreeNode?
     public init(_ val: Int) {
         self.val = val
         self.left = nil
         self.right = nil
+    }
+}
+public class ListNode {
+    public var data: Int
+    public var next: ListNode?
+    public init(_ data: Int) {
+        self.data = data
+        self.next = nil
     }
 }
